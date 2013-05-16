@@ -37,15 +37,16 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-group :test, :development do
+group :development, :test do
   gem 'rspec-rails', '~> 2.11'
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-debugger'
-  gem 'launchy'
 end
 
 group :test do
-  gem 'capybara', '1.1.2'
-  gem 'factory_girl', '2.6.4'
+  gem 'launchy'
+  gem 'capybara', '~>1.1.2'
+  gem 'simplecov', require: false
+  gem 'factory_girl_rails', "~> 4.0"
 end
