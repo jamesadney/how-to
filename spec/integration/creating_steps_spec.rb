@@ -3,7 +3,8 @@ require 'spec_helper'
 feature 'Creating Steps' do
   scenario 'can create a step' do
     task = FactoryGirl.create(:task, name: "Make a sandwich")
-    visit task_path(task)
+    visit '/'
+    click_link "Make a sandwich"
     click_link "Add a Step"
 
     fill_in "Name", with: "Get Ingredients"
