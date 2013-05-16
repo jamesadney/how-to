@@ -11,4 +11,12 @@ class StepsController < ApplicationController
     @step.save
     redirect_to @task
   end
+
+
+  def destroy
+    @task = Task.find(params[:task_id])
+    Step.destroy(params[:id])
+    flash[:notice] = "Step has been deleted."
+    redirect_to @task
+  end
 end

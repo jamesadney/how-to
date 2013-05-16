@@ -1,7 +1,11 @@
 <h2><%= @task.name %></h2>
 <ol>
 	<% @task.steps.each do |step| %>
-	<li><%= link_to step.name, task_step_path(@task) %></li>
+	<li><%= link_to step.name, [@task, step] %>
+		<p>
+			<%= link_to("Delete", [@task, step], :method => :delete, :confirm => "Are you sure you want to delete this step?") %>
+		</p>
+	</li>
 	<% end %>
 </ol>
 <p><%= link_to "Add a Step", new_task_step_path(@task) %></p>
