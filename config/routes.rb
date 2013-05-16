@@ -1,4 +1,7 @@
 Howto::Application.routes.draw do
+  root to: redirect('/tasks')
+
+  resources :tasks
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
