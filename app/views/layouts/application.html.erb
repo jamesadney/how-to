@@ -9,12 +9,14 @@
 <body>
 
 <% flash.each do |kind, message| %>
-<div class="flash" id="<%= kind %>">
+<div class="alert" id="<%= kind %>">
 	<%= message %>
 </div>
 <% end %>
 
-<%= yield %>
+<div class="container">
+	<%= yield %>
+</div>
 
 </body>
 </html>

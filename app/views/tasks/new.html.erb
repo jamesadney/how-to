@@ -1,7 +1,9 @@
 <h2>New Task</h2>
 
 <%= form_for(@task) do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.submit %>
+<fieldset>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.submit :class => "btn btn-primary" %>
+</fieldset>
 <% end %>
